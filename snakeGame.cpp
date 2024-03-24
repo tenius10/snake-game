@@ -5,7 +5,7 @@
 
 #define BOARD_SIZE 20
 #define APPLE_SCORE 10
-#define WAIT_COUNT 10
+#define MOVE_DELAY 15
 using namespace std;
 using namespace console;
 
@@ -115,7 +115,7 @@ bool startSnake(){
         wait();
         waitCnt++;
         
-        if(waitCnt<WAIT_COUNT) continue;
+        if(waitCnt<MOVE_DELAY) continue;
         else waitCnt=0;
 
         // 1. 입력 받기
